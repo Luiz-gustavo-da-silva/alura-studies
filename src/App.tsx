@@ -1,9 +1,11 @@
 import React from 'react';
-
+import Formulario from './components/Formulario';
+import Lista from './components/Lista';
 function App() {
   return (
     <div className="App">
-      <div><h1>Olá, Gustavo!</h1></div>
+      <Formulario/>
+      <Lista/>
     </div>
   );
 }
