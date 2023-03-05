@@ -1,10 +1,16 @@
 import React from 'react';
 import style from './Botao.module.scss';
 
-class Botao extends React.Component <any, any>{
+interface IButao {
+    children: React.ReactChild;
+    type?: "button" | "submit" | "reset" | undefined;
+}
+
+class Botao extends React.Component <IButao>{
     render() {
+        const { type = "button" } = this.props;
         return(
-            <button className={style.Botao}>
+            <button type={type} className={style.Botao}>
                 {this.props.children}
             </button>
         )
